@@ -1,3 +1,17 @@
+terraform {
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "Terraform-POC-GL"
+    workspaces {
+      name = "AKS2024"
+    }
+  }
+}
+
+
+
+
+
 /*terraform {
   backend "azurerm" {
     resource_group_name  = "terraform-poc"
